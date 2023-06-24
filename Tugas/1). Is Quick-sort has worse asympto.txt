@@ -1,0 +1,17 @@
+1). Is Quick-sort has worse asymptotic complexity than merge-sort (T/F)?
+2). Is Binary search is O (log n) (T/F)?
+3). Is Linear search in an unsorted array is O (n)  (T/F)? 
+    Is linear search in a sorted array is O (log n) (T/F)? 
+4)  Is Linear search in a sorted linked list is O (n)  (T/F)? 
+5) If you are only going to look up one value in an array, asymptotic complexity favours doing a linear search on the unsorted array over sorting the array and then doing a binary search (T/F)? 
+6) If all arc weights are unique, the minimum spanning tree of a graph is unique (T/F)?
+7) Is Binary search in an array requires that the array is sorted (T/F)?
+8) Is Insertion into an ordered list can be done in O (log n) time (T/F)?
+9) Is a good hash function tends to distribute elements uniformly throughout the hash table (T/F)? 
+10)  Is In practice, with a good hash function and non-pathological data, objects can be found in O (1) time if the
+hash table is large enough (T/F)? 
+11) Is if a piece of code has asymptotic complexity O (g(n)), then at least g(n) operations will be executed whenever the code is run with parameter n (T/F)? 
+12) Given good implementations for different algorithms for some processes such as sorting, searching or finding a minimum spanning tree, should you always choose the algorithm with the better asymptotic complexity (T/F)?
+13) Is it not possible for the depth-first and breadth-first traversal of a graph to visit nodes in the same sequence if the graph contains more than two nodes (T/F)?
+14) Is the maximum number of nodes in a binary tree of height H (H = 0 for leaf nodes) is 2H+1 – 1 (T/F)?
+15) Is in a complete binary tree, only leaf nodes have no children (T/F)?

@@ -1,0 +1,88 @@
+Input 
+2
+2 3
+3 3
+
+Output
+6
+6
+
+
+
+#include <iostream>
+using namespace std;
+
+// Deklarasikan modulo sebesar 10^9+7
+const int MOD = 1000000007;
+
+// Fungsi untuk menghitung nilai a^b % MOD
+int power(int a, int b) {
+    int result = 1;
+    while (b > 0) {
+        if (b & 1) {
+            result = (1LL * result * a) % MOD;
+        }
+        a = (1LL * a * a) % MOD;
+        b >>= 1;
+    }
+    return result;
+}
+
+int main() {
+    int t;
+    long long n, k;
+    cin >> t;
+    while (t--) {
+        cin >> n >> k;
+
+        // mengurangi k dengan 1 jika k >= MOD
+        if (k >= MOD) {
+            k %= MOD;
+        }
+        
+        // menghitung nilai ans
+        int ans = k;
+        if (n & 1) {
+            ans = (1LL * ans * -1 + MOD) % MOD;
+        }
+
+        // menghitung nilai a1 menggunakan fungsi power
+        int a1 = power(k, n);
+
+        // menampilkan hasil a1 + ans + MOD (untuk menjamin positif)
+        cout << (a1 + ans + MOD) % MOD << "\n";
+    }
+    return 0;
+}
+
+
+Dalam tugas ini, Anda berperan sebagai insinyur sipil yang membangun terowongan melalui gunung. Sayangnya, Anda memiliki anggaran yang sangat terbatas, dan harus membangun terowongan yang paling murah.
+
+Karena para insinyur memiliki kebiasaan menyederhanakan berbagai hal, kami akan membuat model gunung dan terowongan menggunakan bentuk geometris dasar. Pertama-tama, pertimbangkan bahwa bumi itu datar, dan dua dimensi. Di permukaan datar ini berdiri sebuah gunung dengan tinggi h dan lebar w. Setiap sisi gunung adalah parabola (yaitu memenuhi y = ax² + bx + c untuk beberapa a, b, c). Anda juga tahu bahwa kaki gunung itu mulus, yang berarti kecuramannya di kaki gunung itu nol.
+
+File input terdiri dari beberapa kasus uji. Setiap kasus diberikan pada baris dengan sendirinya dan terdiri dari tiga angka h, w dan f, dipisahkan oleh spasi. Semua ini adalah angka floating point yang sangat positif. File input diakhiri dengan kasus uji di mana semua angka adalah nol (yang tidak boleh diproses).
+
+Cetak untuk setiap kasus uji satu nomor, t ketinggian terowongan yang optimal. Selalu cetak tiga digit setelah titik desimal. Anda mungkin berasumsi bahwa membangun terowongan selalu lebih murah daripada berkendara melewati puncak gunung.
+
+Input yang diberikan :
+1 2 1.5
+9033.66 29752.4 1.563382
+0 0 0
+
+Output hasil :
+0.313
+8852.956
+
+Buatlah algoritma diatas 
+
+
+
+
+
+
+
+
+
+
+
+Terowongan dimodelkan sebagai garis horizontal melalui gunung. Terowongan yang terbaik adalah terowongan yang meminimalkan biaya konstruksi. Biaya ini sebanding dengan panjang jalan yang menuju terowongan, ditambah panjang terowongan itu sendiri. Pertimbangkan bahwa setiap meter terowongan adalah faktor f kali lebih mahal dari satu meter jalan.
